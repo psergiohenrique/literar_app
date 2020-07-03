@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Image, KeyboardAvoidingView, Platform, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Image, ImageBackground, KeyboardAvoidingView, Platform, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { RectButton } from 'react-native-gesture-handler';
 import { Feather as Icon } from "@expo/vector-icons";
@@ -15,13 +15,16 @@ const LoginTeacher = () => {
       behavior={Platform.OS === "ios" ? "padding" : undefined}
       style={{ flex: 1 }}
     >
-      <View style={styles.container}>
+      <ImageBackground
+        source={require("../../assets/img/backgroundOne.png")}
+        style={styles.container}
+      >
         <TouchableOpacity style={styles.arrowBack} onPress={() => navigation.goBack()}>
           <Icon name='arrow-left' color='#578E44' size={20} />
         </TouchableOpacity>
 
         <View style={styles.main}>
-          <Image style={styles.logo} source={require('../../assets/img/user.png')} />
+          <Image style={styles.logo} source={require('../../assets/img/literarpng.png')} />
 
           <Text style={styles.title}>SOU PROFESSOR (A)</Text>
 
@@ -60,13 +63,9 @@ const LoginTeacher = () => {
               ESQUECI MINHA SENHA
             </Text>
           </RectButton>
-
-          <View style={styles.footer}>
-            <Image style={{ width: 400, }}source={require('../../assets/img/tree.png')} />
-          </View>
           
         </View>
-      </View>
+      </ImageBackground>
     </KeyboardAvoidingView>
   );
 }

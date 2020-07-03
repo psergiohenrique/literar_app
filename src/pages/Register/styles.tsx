@@ -11,12 +11,9 @@ const styles = StyleSheet.create({
   },
 
   logo: {  
-    marginTop: 22,
-    marginLeft: 110,
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: 150, 
-    height: 150,
+    marginLeft: 120,
+    width: 120, 
+    height: 120,
   },
 
   title: {

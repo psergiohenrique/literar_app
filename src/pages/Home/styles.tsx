@@ -11,9 +11,12 @@ const styles = StyleSheet.create({
   },
 
   logo: {  
-    marginLeft: 36,
-    width: 300, 
-    height: 300,
+    marginTop: 42,
+    marginLeft: 110,
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 150, 
+    height: 150,
   },
 
   title: {
@@ -22,14 +25,6 @@ const styles = StyleSheet.create({
     maxWidth: 280,
     marginTop: 18,
     marginLeft: 90,
-  },
-
-  description: {
-    color: '#6C6C80',
-    fontSize: 16,
-    marginTop: 16,
-    maxWidth: 260,
-    lineHeight: 24,
   },
 
   footer: {},
@@ -45,15 +40,15 @@ const styles = StyleSheet.create({
   },
 
   buttonWhite: {
-    backgroundColor: '#99ba8d',
+    backgroundColor: '#fff',
     height: 60,
     flexDirection: 'row',
     overflow: 'hidden',
     alignItems: 'center',
     marginTop: 32,
-    borderWidth: 4,
-    borderColor: "#20232a",
-    borderRadius: 6,
+    borderRadius: 10,
+    borderWidth: 2,
+    borderColor: '#578E44'
   },
 
   buttonWhiteLinkLeft: {
@@ -74,7 +69,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 16,
     marginRight: 16,
-    marginLeft: 140
+    marginLeft: 110
   },
 
   buttonWhiteLinkText: {

@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Image, ImageBackground, KeyboardAvoidingView, Platform, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Image, KeyboardAvoidingView, Platform, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { RectButton } from 'react-native-gesture-handler';
 import { Feather as Icon } from "@expo/vector-icons";
 
 import styles from './styles';
 
-const LoginStudent = () => {
+const Register = () => {
   const navigation = useNavigation();
   const [city, setCity] = useState("");
 
@@ -15,16 +15,13 @@ const LoginStudent = () => {
       behavior={Platform.OS === "ios" ? "padding" : undefined}
       style={{ flex: 1 }}
     >
-     <ImageBackground
-        source={require("../../assets/img/backgroundOne.png")}
-        style={styles.container}
-      >
+      <View style={styles.container}>
         <TouchableOpacity style={styles.arrowBack} onPress={() => navigation.goBack()}>
           <Icon name='arrow-left' color='#578E44' size={20} />
         </TouchableOpacity>
 
         <View style={styles.main}>
-          <Image style={styles.logo} source={require('../../assets/img/literarpng.png')} />
+          <Image style={styles.logo} source={require('../../assets/img/user.png')} />
 
           <Text style={styles.title}>SOU ALUNO (A)</Text>
 
@@ -69,8 +66,8 @@ const LoginStudent = () => {
           </View>
           
         </View>
-      </ImageBackground>
+      </View>
     </KeyboardAvoidingView>
   );
 }
-export default LoginStudent;
+export default Register;

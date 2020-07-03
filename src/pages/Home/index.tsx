@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <View style={styles.container}>
       <View style={styles.main}>
-        <Image style={styles.logo} source={require('../../assets/img/logo_grande.png')} />
+        <Image style={styles.logo} source={require('../../assets/img/literarpng.png')} />
 
         <Text style={styles.title}>FAZER MEU LOGIN</Text>
 
@@ -22,7 +22,7 @@ const Home = () => {
         </RectButton>
 
         <RectButton style={styles.buttonWhite} onPress={() => navigation.navigate('LoginStudent')}>
-          <Text style={styles.buttonText}>
+          <Text style={styles.buttonTextGreen}>
             SOU ALUNO(A)
           </Text>
         </RectButton>
