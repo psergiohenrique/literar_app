@@ -1,109 +1,110 @@
-import { StyleSheet } from 'react-native';
+import styled from 'styled-components/native';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 16,
-  },
 
-  main: {
-    flex: 1,
-  },
+export const ArrowBack = styled.TouchableOpacity`
+  margin-top: 16%;
+  margin-left: 8%;
+`;
 
-  logo: {  
-    marginTop: 22,
-    marginLeft: 110,
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: 150, 
-    height: 150,
-  },
+export const Main = styled.ImageBackground.attrs({
+  source: require("../../assets/img/backgroundOne.png"),
+})`
+  flex: 1;
+`;
 
-  title: {
-    color: '#578E44',
-    fontSize: 16,
-    maxWidth: 280,
-    marginLeft: 120,
-    marginTop: 8
-  },
+export const Logo = styled.Image.attrs({
+  source: require('../../assets/img/literarpng.png'),
+  resizeMode: 'stretch',
+})`
+  height: 150px;
+  width: 150px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 32%;
+`;
 
-  form: {},
+export const Title = styled.Text`
+  color: #578E44;
+  font-size: 16px;
+  max-width: 280px;
+  margin-top: 8%;
+  justify-content: center;
+  align-items: center;
+  margin-left: 32%;
+`;
 
-  footer: {
-    position: 'absolute',
-    flex:0.1,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    height: 250,
-    alignItems:'center',
-  },
+export const Label = styled.Text`
+  color: #000;
+  margin-left: 5%;
+  font-size: 16px;
+  max-width: 280px;
+  margin-top: 8%;
+  margin-left: 16%;
+`;
 
-  arrowBack: {
-    marginTop: 32
-  },
+export const Label2 = styled.Text`
+  color: #000;
+  margin-left: 5%;
+  font-size: 16px;
+  max-width: 280px;
+  margin-top: 4%;
+  margin-left: 16%;
+`;
 
-  button: {
-    backgroundColor: '#578E44',
-    height: 60,
-    flexDirection: 'row',
-    borderRadius: 10,
-    overflow: 'hidden',
-    alignItems: 'center',
-    marginTop: 32,
-  },
+export const Input = styled.TextInput`
+  height: 60px;
+  background-color: #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-top: 2%;
+  margin-left: 14%;
+  width: 70%;
+  justify-content: center;
+  
+`;
 
-  buttonWhiteLink: {
-    backgroundColor: '#fff',
-    height: 30,
-    flexDirection: 'row',
-    overflow: 'hidden',
-    alignItems: 'center',
-    marginTop: 16,
-    marginRight: 16,
-    marginLeft: 120
-  },
+export const ButtonText = styled.Text`
+  flex: 1;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+`;
 
-  buttonWhiteLinkText: {
-    color: '#578E44',
-    justifyContent: 'center',
-    textAlign: 'center',
-    fontSize: 14,
-    textDecorationLine: 'underline'
-  },
+export const Button = styled.TouchableOpacity`
+  background-color: #578e44;
+  height: 60px;
+  flex-direction: row;
+  border-radius: 10px;
+  overflow: hidden;
+  align-items: center;
+  margin-top: 4%;
+  width: 70%;
+  margin-left: 14%;
+`;
 
-  buttonText: {
-    flex: 1,
-    justifyContent: 'center',
-    textAlign: 'center',
-    color: '#FFF',
-    fontSize: 16,
-  },
 
-  label: {
-    color: 'black', 
-    fontSize: 16,
-    marginLeft: 5,
-    marginTop: 32,
-    fontWeight: 'bold'
-  },
+export const ButtonWhite = styled.TouchableOpacity`
+  background-color: #fff;
+  height: 20px;
+  flex-direction: row;
+  border-radius: 10px;
+  overflow: hidden;
+  align-items: center;
+  margin-top: 32px;
+  border-width: 2px;
+  border-color: #578e44;
+  width: 70%;
+`;
 
-  labelDown: {
-    color: 'black', 
-    fontSize: 16,
-    marginLeft: 5,
-    marginTop: 16,
-    fontWeight: 'bold'
-  },
+export const ButtonWhiteLinkLeft = styled.TouchableOpacity`
+  background-color: transparent;
+  height: 30px;
+  margin-top: 16px;
+`;
 
-  input: {
-    height: 60,
-    backgroundColor: '#ddd',
-    borderRadius: 10,
-    paddingHorizontal: 24,
-    fontSize: 16,
-    marginTop: 8
-  },
-});
-
-export default styles;
+export const ButtonWhiteLinkText = styled.Text`
+  color: #578e44;
+  font-size: 14px;
+  text-decoration-line: underline;
+  text-align: center;
+`;

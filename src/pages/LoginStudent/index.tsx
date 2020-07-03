@@ -1,76 +1,82 @@
 import React, { useState } from "react";
-import { Image, ImageBackground, KeyboardAvoidingView, Platform, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { RectButton } from 'react-native-gesture-handler';
+import { getBottomSpace } from 'react-native-iphone-x-helper';
 import { Feather as Icon } from "@expo/vector-icons";
 
-import styles from './styles';
-
+import {
+  ArrowBack,
+  Main,
+  Logo,
+  Title,
+  Label,
+  Label2,
+  Input,
+  ButtonText,
+  ButtonWhiteLinkText,
+  Button,
+  ButtonWhiteLinkLeft,
+} from './styles';
 const LoginStudent = () => {
   const navigation = useNavigation();
   const [city, setCity] = useState("");
 
   return (
-    <KeyboardAvoidingView
-      behavior={Platform.OS === "ios" ? "padding" : undefined}
-      style={{ flex: 1 }}
-    >
-     <ImageBackground
+    <Main>
+      <ArrowBack onPress={() => navigation.goBack()}>
+        <Icon name='arrow-left' color='#578E44' size={20} />
+      </ArrowBack>
+      <ImageBackground
         source={require("../../assets/img/backgroundOne.png")}
-        style={styles.container}
+        style={
+          { 
+            flex: 1, 
+            paddingBottom: getBottomSpace(),
+          }
+        }
       >
-        <TouchableOpacity style={styles.arrowBack} onPress={() => navigation.goBack()}>
-          <Icon name='arrow-left' color='#578E44' size={20} />
-        </TouchableOpacity>
+        <Logo />
 
-        <View style={styles.main}>
-          <Image style={styles.logo} source={require('../../assets/img/literarpng.png')} />
+        <Title>
+          SOU ALUNO(A)
+        </Title>
 
-          <Text style={styles.title}>SOU ALUNO (A)</Text>
+        <Label>
+          E-MAIL
+        </Label>
+        <Input
+          placeholder="Digite seu e-mail"
+          autoCorrect={false}
+          value={city}
+          onChangeText={setCity}
+        />
 
-          <View>
-            <Text style={styles.label}>
-              E-MAIL
-            </Text>
-            <TextInput
-              style={styles.input}
-              placeholder="Digite seu e-mail"
-              autoCorrect={false}
-              value={city}
-              onChangeText={setCity}
-            />
+        <Label2>
+          SENHA
+        </Label2>
+        <Input
+          placeholder="Digite sua senha secreta"
+          autoCorrect={false}
+          value={city}
+          onChangeText={setCity}
+        />
 
-            <Text style={styles.labelDown}>
-              SENHA
-            </Text>
-            <TextInput
-              style={styles.input}
-              placeholder="Digite sua senha secreta"
-              autoCorrect={false}
-              value={city}
-              onChangeText={setCity}
-            />
-          </View>
+        <Button onPress={() => navigation.navigate('LoginTeacher')}>
+          <ButtonText>
+            ENTRAR
+          </ButtonText>
+        </Button>
 
-          <RectButton style={styles.button} onPress={() => navigation.navigate('LoginTeacher')}>
-            <Text style={styles.buttonText}>
-              ENTRAR
-            </Text>
-          </RectButton>
+        <ButtonWhiteLinkLeft>
+          <ButtonWhiteLinkText>
+            ESQUECI MINHA SENHA
+          </ButtonWhiteLinkText>
+        </ButtonWhiteLinkLeft>
 
-          <RectButton style={styles.buttonWhiteLink}>
-            <Text style={styles.buttonWhiteLinkText}>
-              ESQUECI MINHA SENHA
-            </Text>
-          </RectButton>
-
-          <View style={styles.footer}>
-            <Image style={{ width: 400, }}source={require('../../assets/img/tree.png')} />
-          </View>
           
-        </View>
-      </ImageBackground>
-    </KeyboardAvoidingView>
+        </ImageBackground>
+      </Main>
   );
 }
+
 export default LoginStudent;
