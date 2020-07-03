@@ -1,55 +1,69 @@
 import React from 'react';
-import { Image, Text, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { RectButton } from 'react-native-gesture-handler';
 
-import styles from './styles';
+import {
+  Container,
+  Main,
+  Logo,
+  Title,
+  ButtonText,
+  ButtonTextGreen,
+  ArvoreLogo,
+  TextoArvoreLogo,
+  ButtonWhiteLinkText,
+  ButtonWhiteLinkTextLeft,
+  Button,
+  ButtonWhite,
+  ButtonWhiteLinkLeft,
+  ButtonWhiteLinkRight,
+  ViewLink
+} from './styles';
 
 const Home = () => {
   const navigation = useNavigation();
 
   return (
-    <View style={styles.container}>
-      <View style={styles.main}>
-        <Image style={styles.logo} source={require('../../assets/img/literarpng.png')} />
+    <Container>
+      <Main>
+        <Logo />
 
-        <Text style={styles.title}>FAZER MEU LOGIN</Text>
+        <Title>FAZER MEU LOGIN</Title>
 
-        <RectButton style={styles.button} onPress={() => navigation.navigate('LoginTeacher')}>
-          <Text style={styles.buttonText}>
+        <Button onPress={() => navigation.navigate('LoginTeacher')}>
+          <ButtonText>
             SOU PROFESSOR(A)
-          </Text>
-        </RectButton>
+          </ButtonText>
+        </Button>
 
-        <RectButton style={styles.buttonWhite} onPress={() => navigation.navigate('LoginStudent')}>
-          <Text style={styles.buttonTextGreen}>
+        <ButtonWhite onPress={() => navigation.navigate('LoginStudent')}>
+          <ButtonTextGreen>
             SOU ALUNO(A)
-          </Text>
-        </RectButton>
+          </ButtonTextGreen>
+        </ButtonWhite>
 
-        <View style={{ flexDirection: 'row' }}>
-          <RectButton style={styles.buttonWhiteLinkLeft}>
-            <Text style={styles.buttonWhiteLinkText}>
+        <ViewLink>
+          <ButtonWhiteLinkLeft>
+            <ButtonWhiteLinkTextLeft>
               CADASTRAR
-            </Text>
-          </RectButton>
+            </ButtonWhiteLinkTextLeft>
+          </ButtonWhiteLinkLeft>
 
-          <RectButton style={styles.buttonWhiteLinkRight}>
-            <Text style={styles.buttonWhiteLinkText}>
+          <ButtonWhiteLinkRight>
+            <ButtonWhiteLinkText>
               ESQUECI MINHA SENHA
-            </Text>
-          </RectButton>
-        </View>
+            </ButtonWhiteLinkText>
+          </ButtonWhiteLinkRight>
+        </ViewLink>
+
+
+        <TextoArvoreLogo>
+          UM PROJETO
+        </TextoArvoreLogo>
+        <ArvoreLogo />
         
-      </View>
+      </Main>
 
-      <View style={styles.footer}>
-        <Text style={styles.textoArvoreLogo}>UM PROJETO</Text>
-
-        <Image style={styles.arvoreLogo} source={require('../../assets/img/baixados.png')} />
-      </View>
-      
-    </View>
+    </Container>
   )
 }
 

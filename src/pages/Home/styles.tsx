@@ -1,113 +1,122 @@
 import { StyleSheet } from 'react-native';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 16,
-  },
+import {getBottomSpace} from 'react-native-iphone-x-helper';
+import styled from 'styled-components/native';
 
-  main: {
-    flex: 1,
-  },
+export const Container = styled.View`
+  flex: 1;
+`;
 
-  logo: {  
-    marginTop: 42,
-    marginLeft: 110,
-    justifyContent: 'center',
+export const Main = styled.ScrollView.attrs({
+  contentContainerStyle: {
+    width: '100%',
+    paddingBottom: getBottomSpace(),
     alignItems: 'center',
-    width: 150, 
-    height: 150,
   },
+})``;
 
-  title: {
-    color: '#578E44',
-    fontSize: 24,
-    maxWidth: 280,
-    marginTop: 18,
-    marginLeft: 90,
-  },
+export const Logo = styled.Image.attrs({
+  source: require('../../assets/img/literarpng.png'),
+  resizeMode: 'stretch',
+})`
+  margin-top: 15%;
+  height: 150px;
+  width: 150px;
+  justify-content: center;
+  align-items: center;
+`;
 
-  footer: {},
+export const Title = styled.Text`
+  color: #578E44;
+  font-size: 24px;
+  max-width: 280px;
+  margin-top: 15%;
+  justify-content: center;
+  align-items: center;
+`;
 
-  button: {
-    backgroundColor: '#578E44',
-    height: 60,
-    flexDirection: 'row',
-    borderRadius: 10,
-    overflow: 'hidden',
-    alignItems: 'center',
-    marginTop: 32,
-  },
+export const ButtonText = styled.Text`
+  flex: 1;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+`;
 
-  buttonWhite: {
-    backgroundColor: '#fff',
-    height: 60,
-    flexDirection: 'row',
-    overflow: 'hidden',
-    alignItems: 'center',
-    marginTop: 32,
-    borderRadius: 10,
-    borderWidth: 2,
-    borderColor: '#578E44'
-  },
+export const Button = styled.TouchableOpacity`
+  background-color: #578e44;
+  height: 60px;
+  flex-direction: row;
+  border-radius: 10px;
+  overflow: hidden;
+  align-items: center;
+  margin-top: 10%;
+  width: 70%;
+`;
 
-  buttonWhiteLinkLeft: {
-    backgroundColor: '#fff',
-    height: 30,
-    flexDirection: 'row',
-    overflow: 'hidden',
-    alignItems: 'center',
-    marginTop: 16,
-    marginLeft: 16
-  },
+export const ButtonWhite = styled.TouchableOpacity`
+  background-color: #fff;
+  height: 60px;
+  flex-direction: row;
+  border-radius: 10px;
+  overflow: hidden;
+  align-items: center;
+  margin-top: 32px;
+  border-width: 2px;
+  border-color: #578e44;
+  width: 70%;
+`;
 
-  buttonWhiteLinkRight: {
-    backgroundColor: '#fff',
-    height: 30,
-    flexDirection: 'row',
-    overflow: 'hidden',
-    alignItems: 'center',
-    marginTop: 16,
-    marginRight: 16,
-    marginLeft: 110
-  },
+export const ButtonTextGreen = styled.Text`
+  flex: 1;
+  text-align: center;
+  color: #578e44;
+  font-size: 16px;
+`;
 
-  buttonWhiteLinkText: {
-    color: '#578E44',
-    justifyContent: 'center',
-    textAlign: 'center',
-    fontSize: 14,
-    textDecorationLine: 'underline'
-  },
+export const ViewLink = styled.View`
+  flex-direction: row;
+  margin-top: 8%;
+`;
 
-  buttonText: {
-    flex: 1,
-    justifyContent: 'center',
-    textAlign: 'center',
-    color: '#FFF',
-    fontSize: 16,
-  },
+export const ButtonWhiteLinkLeft = styled.TouchableOpacity`
+  background-color: #fff;
+  height: 30px;
+`;
 
-  buttonTextGreen: {
-    color: '#578E44',
-    flex: 1,
-    justifyContent: 'center',
-    textAlign: 'center',
-    fontSize: 16,
-  },
+export const ButtonWhiteLinkRight = styled.TouchableOpacity`
+  background-color: #fff;
+  height: 30px;
+`;
 
-  textoArvoreLogo: {
-    color: 'black', 
-    fontSize: 12,
-    marginLeft: 90,
-  },
+export const ButtonWhiteLinkText = styled.Text`
+  color: #578e44;
+  font-size: 14px;
+  text-decoration-line: underline;
+  text-align: center;
+`;
 
-  arvoreLogo: {  
-    marginLeft: 90,
-    justifyContent: 'center',
-    width: 190, 
-    height: 45,
-  },
-});
+export const ButtonWhiteLinkTextLeft = styled.Text`
+  color: #578e44;
+  font-size: 14px;
+  text-decoration-line: underline;
+  text-align: center;
+  margin-right: 12%;
+`;
 
-export default styles;
+export const TextoArvoreLogo = styled.Text`
+  color: #000;
+  font-size: 12px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 50%;
+`;
+
+export const ArvoreLogo = styled.Image.attrs({
+  source: require('../../assets/img/baixados.png'),
+  resizeMode: 'stretch',
+})`
+  justify-content: center;
+  height: 45px;
+  width: 190px;
+  bottom: 0;
+`;
