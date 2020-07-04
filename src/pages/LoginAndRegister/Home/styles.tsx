@@ -14,7 +14,7 @@ export const Main = styled.ScrollView.attrs({
 })``;
 
 export const Logo = styled.Image.attrs({
-  source: require('../../assets/img/literarpng.png'),
+  source: require('../../../assets/img/literarpng.png'),
   resizeMode: 'stretch',
 })`
   margin-top: 15%;
@@ -110,7 +110,7 @@ export const TextoArvoreLogo = styled.Text`
 `;
 
 export const ArvoreLogo = styled.Image.attrs({
-  source: require('../../assets/img/baixados.png'),
+  source: require('../../../assets/img/baixados.png'),
   resizeMode: 'stretch',
 })`
   justify-content: center;

@@ -55,7 +55,7 @@ const ForgotPassword = () => {
         />
 
 
-        <Button onPress={() => navigation.navigate('Home')}>
+        <Button onPress={() => navigation.navigate('ForgotPasswordSuccess')}>
           <ButtonText>
             REDEFINIR SENHA
           </ButtonText>

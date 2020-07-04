@@ -27,7 +27,7 @@ const LoginStudent = () => {
         <Icon name='arrow-left' color='#578E44' size={20} />
       </ArrowBack>
       <ImageBackground
-        source={require("../../assets/img/backgroundOne.png")}
+        source={require("../../../assets/img/backgroundOne.png")}
         style={
           { 
             flex: 1, 

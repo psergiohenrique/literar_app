@@ -7,13 +7,13 @@ export const ArrowBack = styled.TouchableOpacity`
 `;
 
 export const Main = styled.ImageBackground.attrs({
-  source: require("../../assets/img/backgroundOne.png"),
+  source: require("../../../assets/img/backgroundOne.png"),
 })`
   flex: 1;
 `;
 
 export const Logo = styled.Image.attrs({
-  source: require('../../assets/img/literarpng.png'),
+  source: require('../../../assets/img/literarpng.png'),
   resizeMode: 'stretch',
 })`
   height: 150px;
