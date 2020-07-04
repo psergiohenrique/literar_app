@@ -62,13 +62,13 @@ const LoginTeacher = () => {
           onChangeText={setCity}
         />
 
-        <Button onPress={() => navigation.navigate('LoginTeacher')}>
+        <Button onPress={() => navigation.navigate('Dashboard')}>
           <ButtonText>
             ENTRAR
           </ButtonText>
         </Button>
 
-        <ButtonWhiteLinkLeft>
+        <ButtonWhiteLinkLeft  onPress={() => navigation.navigate('ForgotPassword')}>
           <ButtonWhiteLinkText>
             ESQUECI MINHA SENHA
           </ButtonWhiteLinkText>
