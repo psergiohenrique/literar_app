@@ -42,13 +42,13 @@ const Home = () => {
         </ButtonWhite>
 
         <ViewLink>
-          <ButtonWhiteLinkLeft>
+          <ButtonWhiteLinkLeft onPress={() => navigation.navigate('Register')}>
             <ButtonWhiteLinkTextLeft>
               CADASTRAR
             </ButtonWhiteLinkTextLeft>
           </ButtonWhiteLinkLeft>
 
-          <ButtonWhiteLinkRight>
+          <ButtonWhiteLinkRight onPress={() => navigation.navigate('ForgotPassword')}>
             <ButtonWhiteLinkText>
               ESQUECI MINHA SENHA
             </ButtonWhiteLinkText>

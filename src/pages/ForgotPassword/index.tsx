@@ -18,11 +18,9 @@ import {
   LabelInput
 } from './styles';
 
-const Register = () => {
+const ForgotPassword = () => {
   const navigation = useNavigation();
-  const [acceptTerms, setAcceptTerms] = useState(false);
   const [name, setName] = useState('');
-  const [school, setSchool] = useState('');
   const [email, setEmail] = useState('');
 
   return (
@@ -33,27 +31,12 @@ const Register = () => {
       <Main>
         <Logo />
 
-        <Title>REALIZAR MEU CADASTRO</Title>
+        <Title>ESQUECEU SUA SENHA?</Title>
 
-        <Label>Você é Professor ou Aluno?</Label>
-        <CheckBoxContainer>
-          <CheckBox
-            isChecked={acceptTerms}
-            onClick={() => setAcceptTerms(!acceptTerms)}
-          />
-          <CheckBoxTitle>
-            SOU PROFESSOR
-          </CheckBoxTitle>
-        </CheckBoxContainer>
-        <CheckBoxContainer>
-          <CheckBox
-            isChecked={acceptTerms}
-            onClick={() => setAcceptTerms(!acceptTerms)}
-          />
-          <CheckBoxTitle>
-            SOU ALUNO
-          </CheckBoxTitle>
-        </CheckBoxContainer>
+        <Label>
+          Não tem problema, insira abaixo o seu nome e e-mail 
+          de cadastro da conta  te enviaremos um link para redefinição
+        </Label>
 
         <LabelInput>Seu nome completo:</LabelInput>
         <Input
@@ -61,14 +44,6 @@ const Register = () => {
           autoCorrect={false}
           value={name}
           onChangeText={setName}
-        />
-
-        <LabelInput>Nome da Escola:</LabelInput>
-        <Input
-          placeholder="Coloca aqui o nome da sua escola!"
-          autoCorrect={false}
-          value={school}
-          onChangeText={setSchool}
         />
 
         <LabelInput>Seu e-mail:</LabelInput>
@@ -82,7 +57,7 @@ const Register = () => {
 
         <Button onPress={() => navigation.navigate('Home')}>
           <ButtonText>
-            CADASTRAR
+            REDEFINIR SENHA
           </ButtonText>
         </Button>
 
@@ -93,4 +68,4 @@ const Register = () => {
   )
 }
 
-export default Register;
+export default ForgotPassword;

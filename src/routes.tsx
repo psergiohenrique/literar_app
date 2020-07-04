@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import LoginStudent from './pages/LoginStudent';
 import LoginTeacher from './pages/LoginTeacher';
 import Register from './pages/Register';
+import ForgotPassword from './pages/ForgotPassword';
 
 const AppStack = createStackNavigator();
 
@@ -23,6 +24,7 @@ const Routes = () => {
         <AppStack.Screen name='LoginStudent' component={LoginStudent}/>
         <AppStack.Screen name='LoginTeacher' component={LoginTeacher}/>
         <AppStack.Screen name='Register' component={Register}/>
+        <AppStack.Screen name='ForgotPassword' component={ForgotPassword}/>
       </AppStack.Navigator>
     </NavigationContainer>
   );

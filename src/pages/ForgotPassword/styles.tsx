@@ -39,10 +39,10 @@ export const Title = styled.Text`
 export const Label = styled.Text`
   color: #000;
   font-size: 14px;
-  margin-right: auto;
+  margin-right: 16%;
   margin-left: 16%;
-  margin-bottom: 2%;
-  margin-top: 2%;
+  margin-bottom: 9%;
+  margin-top: 10%;
 `;
 
 export const LabelInput = styled.Text`
