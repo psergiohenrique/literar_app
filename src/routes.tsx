@@ -35,18 +35,15 @@ const Routes = () => {
         <AppStack.Screen name='Register' component={Register} />
         <AppStack.Screen name='ForgotPassword' component={ForgotPassword} />
         <AppStack.Screen name='ForgotPasswordSuccess' component={ForgotPasswordSuccess} />
-<<<<<<< HEAD
-        <AppStack.Screen name='WelcomeLiterar' component={WelcomeLieterar} />
-        <AppStack.Screen name='WelcomeInfo' component={WelcomeInfo} />
-=======
 
         {/* ROTAS DE BOAS VINDAS */}
+        <AppStack.Screen name='WelcomeLiterar' component={WelcomeLieterar} />
+        <AppStack.Screen name='WelcomeInfo' component={WelcomeInfo} />
 
         {/* ROTAS DE DASH */}
         <AppStack.Screen name='Dashboard' component={Dashboard} />
         <AppStack.Screen name='Menu' component={Menu} />
         <AppStack.Screen name='DetailsBook' component={DetailsBook} />
->>>>>>> e882f5f76512765987ca1dd4d0129aa957a02c14
       </AppStack.Navigator>
     </NavigationContainer>
   );

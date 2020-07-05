@@ -62,11 +62,7 @@ const LoginTeacher = () => {
           onChangeText={setCity}
         />
 
-<<<<<<< HEAD
         <Button onPress={() => navigation.navigate('WelcomeLiterar')}>
-=======
-        <Button onPress={() => navigation.navigate('Dashboard')}>
->>>>>>> e882f5f76512765987ca1dd4d0129aa957a02c14
           <ButtonText>
             ENTRAR
           </ButtonText>
