@@ -15,6 +15,10 @@ import Dashboard from './pages/Main/Dashboard';
 import Menu from './pages/Main/Menu';
 import DetailsBook from './pages/Main/DetailsBook';
 
+import Dashboard from './pages/Main/Dashboard';
+import Menu from './pages/Main/Menu';
+import DetailsBook from './pages/Main/DetailsBook';
+
 const AppStack = createStackNavigator();
 
 const Routes = () => {
